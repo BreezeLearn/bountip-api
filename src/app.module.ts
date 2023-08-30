@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserModule } from './user/user.module'; // Include other modules as needed
+import { UserModule } from './user/user.module'; 
 import { RestaurantModule } from './restaurant/restaurant.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { UserRoleModule } from './user-role/user-role.module';
@@ -12,9 +12,9 @@ import { RestaurantTypeModule } from './restaurant-type/restaurant-type.module';
       type: 'postgres', 
       host: 'localhost', //  database host
       port: 5434, // database port
-      username: 'your-username', //  database username
-      password: 'your-password', //  database password
-      database: 'nestjs_db', //  database name
+      username: 'postgres', //  database username
+      password: 'postgres', //  database password
+      database: 'postgres', //  database name
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // Set to false in production
     }),
