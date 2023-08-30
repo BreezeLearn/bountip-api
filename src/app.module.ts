@@ -11,7 +11,7 @@ import { RestaurantTypeModule } from './restaurant-type/restaurant-type.module';
     TypeOrmModule.forRoot({
       type: 'postgres', 
       host: 'localhost', //  database host
-      port: 5432, // database port
+      port: 5434, // database port
       username: 'your-username', //  database username
       password: 'your-password', //  database password
       database: 'nestjs_db', //  database name
