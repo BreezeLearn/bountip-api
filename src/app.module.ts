@@ -10,11 +10,11 @@ import { RestaurantTypeModule } from './restaurant-type/restaurant-type.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres', 
-      host: 'localhost', //  database host
+      host: '127.0.0.1', //  database host
       port: 5434, // database port
       username: 'postgres', //  database username
-      password: 'postgres', //  database password
-      database: 'postgres', //  database name
+      password: 'delhi123', //  database password
+      database: 'bountip', //  database name
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // Set to false in production
     }),
