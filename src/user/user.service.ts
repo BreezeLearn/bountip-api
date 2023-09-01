@@ -10,5 +10,21 @@ export class UserService {
     private readonly userRepository: Repository<User>,
   ) {}
 
-  // methods for CRUD operations on the User entity
+  async createUser(userData: Partial<User>, roleId: number): Promise<User> {
+    // Create a new user instance
+    const user = this.userRepository.create(userData);
+  
+    // Assign the specified roleId to the new user
+    user.roleId = roleId;
+
+    user.phoneNumber = userData.phoneNumber;
+  
+    // Save the user to the database
+    return this.userRepository.save(user);
+  }
+  
+
+  // Implement other CRUD methods here if needed
 }
+
+

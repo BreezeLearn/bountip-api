@@ -18,8 +18,11 @@ export class InventoryController {
 
   @Post()
   create(@Body() inventoryData: Partial<Inventory>): Promise<Inventory> {
+    console.log('Received inventory data:', inventoryData);
     return this.inventoryService.create(inventoryData);
-  }
+}
+
+
 
   // if more CRUD routes is needed
 }
