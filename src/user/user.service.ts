@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
@@ -11,20 +11,19 @@ export class UserService {
   ) {}
 
   async createUser(userData: Partial<User>, roleId: number): Promise<User> {
-    // Create a new user instance
+    
+    if (!userData.first_name || !userData.last_name || !userData.email || !userData.password) {
+      throw new BadRequestException('FirstName & LastName required! Cannot be empty');
+    }
+
     const user = this.userRepository.create(userData);
-  
-    // Assign the specified roleId to the new user
+
     user.roleId = roleId;
 
     user.phoneNumber = userData.phoneNumber;
-  
-    // Save the user to the database
+
     return this.userRepository.save(user);
   }
+
   
-
-  // Implement other CRUD methods here if needed
 }
-
-
