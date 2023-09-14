@@ -3,15 +3,15 @@
     "builds": [
         {
             "src": "src/main.ts",
-            "use": "@vercel/node",
-            "outputDirectory": "public"
+            "use": "@vercel/node"
+            
 
         }
 ],
     "routes": [
         {
             "src": "/{.*}",
-            "dest": "public/main.ts",
+            "dest": "src/main.ts",
             "methods": [
                 "GET",
                 "POST",
