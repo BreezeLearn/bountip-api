@@ -10,7 +10,7 @@ import { RestaurantTypeModule } from './restaurant-type/restaurant-type.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres', 
-      host: '3.98.121.6', //  database host
+      host: '35.183.135.207', //  database host
       port: 5432, // database port
       username: 'postgres', //  database username
       password: 'secret', //  database password
