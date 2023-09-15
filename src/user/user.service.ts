@@ -12,7 +12,7 @@ export class UserService {
 
   async createUser(userData: Partial<User>, roleId: number): Promise<User> {
     
-    if (!userData.first_name || !userData.last_name || !userData.email || !userData.password) {
+    if (!userData.firstName || !userData.lastName || !userData.email || !userData.password) {
       throw new BadRequestException('FirstName & LastName required! Cannot be empty');
     }
 

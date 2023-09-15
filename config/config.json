@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "secret",
+    "database": "bountip",
+    "host": "35.183.135.207",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "secret",
+    "database": "bountip",
+    "host": "35.183.135.207",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "secret",
+    "database": "bountip",
+    "host": "35.183.135.207",
+    "dialect": "postgres"
+  }
+}

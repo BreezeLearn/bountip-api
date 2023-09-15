@@ -10,5 +10,5 @@ export class UserRoleService {
     private readonly userRoleRepository: Repository<UserRole>,
   ) {}
 
-  //  methods for CRUD operations on the UserRole entity
+  
 }

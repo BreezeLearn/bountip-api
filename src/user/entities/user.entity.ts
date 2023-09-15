@@ -9,13 +9,10 @@ export class User {
   id: number;
 
   @Column()
-  first_name: string;
+  firstName: string;
 
   @Column()
-  last_name: string;
-
-  @Column()
-  username: string;
+  lastName: string;
 
   @Column({ name: 'role_id' })
   roleId: number;
